@@ -1,0 +1,205 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a simple style to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffc076;
+}
+
+/* Style the header section */
+.header {
+    background-image: url('images/nursery-bg.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #ff6f61;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+/* Style the featured section */
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.feature-box {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-box a {
+    text-decoration: none;
+    color: #333;
+}
+
+.feature-box a:hover {
+    transform: scale(1.05);
+}
+
+.feature-box img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature-box img:hover {
+    transform: scale(1.05);
+}
+
+.feature-box h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Style the content section (used on category pages) */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+/* Additional styles and enhancements can be added here */
+/* Modal Styles */
+.modal-dialog {
+    max-width: 80%;
+}
+
+.modal-content {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border: none;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Play/Pause/Stop Button Styles */
+.modal-controls button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-controls button:hover {
+    background-color: #e65549;
+}
+
+/* Close Button Styles */
+.close {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff6f61;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    /* Add responsive styles here */
+}
+
+/* Media query for even smaller screens (e.g., mobile) */
+@media (max-width: 480px) {
+    /* Add specific styles for mobile here */
+}

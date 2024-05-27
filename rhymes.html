@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KidsAudioHub - A hub of audio stories for kids">
+    <meta name="author" content="Your Name">
+    <title>Rhymes - KidsAudioHub</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Include Your Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Bootstrap and Popper.js JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .modal-image {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="alphabet.html">Alphabet Songs</a></li>
+            <li><a href="math.html">Basic Math</a></li>
+            <li><a href="rhymes.html">Rhymes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Story 1 Feature Box -->
+        <div class="feature-box">
+            <img src="images/kids.jpeg" alt="Rhyme 1">
+            <h2>Humpty Dumpty</h2>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#story1Modal">Listen</button>
+        </div>
+    
+        <!-- Story 2 Feature Box -->
+        <div class="feature-box">
+            <img src="images/kids.jpeg" alt="Story 2">
+            <h2>Old Mac Donalad</h2>
+            <p>Summary of Story 2.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#story2Modal">Listen</button>
+        </div>
+
+        <!-- Add more feature-box elements for other stories within the "Stories" category -->
+    </div>
+
+    <!-- Modals for Audio Playback -->
+    <!-- Story 1 Modal -->
+    <div class="modal fade" id="story1Modal" tabindex="-1" role="dialog" aria-labelledby="story1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="story1ModalLabel">Humpty Dumpty</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/kids.jpeg" alt="Placeholder Image" class="modal-image">
+                    <div class="audio-controls">
+                        <audio id="story1Audio" controls>
+                            <source src="audio/rhyme1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <button class="btn btn-primary" onclick="playAudio('story1Audio')">Play</button>
+                        <button class="btn btn-primary" onclick="pauseAudio('story1Audio')">Pause</button>
+                        <button class="btn btn-primary" onclick="stopAudio('story1Audio')">Stop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story 2 Modal -->
+    <div class="modal fade" id="story2Modal" tabindex="-1" role="dialog" aria-labelledby="story2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="story2ModalLabel">Old Mac Donalad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/kids.jpeg" alt="Placeholder Image" class="modal-image">
+                    <div class="audio-controls">
+                        <audio id="story3Audio" controls>
+                            <source src="audio/rhyme2.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <button class="btn btn-primary" onclick="playAudio('story3Audio')">Play</button>
+                        <button class="btn btn-primary" onclick="pauseAudio('story3Audio')">Pause</button>
+                        <button class="btn btn-primary" onclick="stopAudio('story3Audio')">Stop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Audio Playback Functions -->
+    <script>
+        function playAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.play();
+        }
+
+        function pauseAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.pause();
+        }
+
+        function stopAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
